@@ -49,3 +49,10 @@ wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_am
 unzip terraform_0.12.26_linux_amd64.zip
 sudo mv terraform /usr/local/bin/terraform
 
+#terraformando
+
+git clone https://github.com/msfidelis/terraformando-eks.git
+cd terraformando-eks
+terraform init
+terraform apply --auto-approve
+
