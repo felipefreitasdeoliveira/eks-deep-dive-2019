@@ -42,3 +42,10 @@ echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.bashrc
 # Add current user to docker group
 sudo usermod -a -G docker $USER
 echo -e "\n>>> You must log out and log back in for docker commands to work as $USER.\n"
+
+# Terraform
+sudo yun install unzip wget -y
+wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip
+unzip terraform_0.12.26_linux_amd64.zip
+sudo mv terraform /usr/local/bin/terraform
+
