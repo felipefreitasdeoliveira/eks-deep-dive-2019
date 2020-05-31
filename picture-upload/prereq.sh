@@ -56,3 +56,9 @@ cd terraformando-eks
 terraform init
 terraform apply --auto-approve
 
+
+# Criando repositório ECR para imagens
+aws ecr create-repository --repository-name photo-filter
+aws ecr create-repository --repository-name photo-storage
+aws ecr create-repository --repository-name web-client
+
