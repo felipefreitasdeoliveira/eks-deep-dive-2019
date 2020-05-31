@@ -62,3 +62,13 @@ aws ecr create-repository --repository-name photo-filter
 aws ecr create-repository --repository-name photo-storage
 aws ecr create-repository --repository-name web-client
 
+# Build das Imagens-Docker
+cd ~/environment/eks-deep-dive-2019/picture-upload
+make install
+
+cd ~/environment/eks-deep-dive-2019/picture-upload/apps
+go build
+
+
+cd /home/ec2-user/environment/eks-deep-dive-2019/picture-upload
+docker-compose up
